@@ -44,90 +44,100 @@
       <p>A collectible card game<br>that is much better<br>than any other you think you've played.</p>
     <hr>
 
-    <h2>A Haiku About Magic</h2>
-      <pre>
-        An eternal choice
-        Grapple with the decision
-        Where do I put cards?
-      </pre>
+    <div class="tab">
+      <button class="tablinks" onclick="openPage(event, 'An Intro')">An Intro</button>
+      <button class="tablinks" onclick="openPage(event, 'Getting Started')">Getting Started</button>
+    </div>
 
-      <style>
-        a:link {
-          color: green;
-          background-color: transparent;
-          text-decoration: overline;
-        }
-        a:visited {
-          color: blue;
-          background-color: transparent;
-          text-decoration: underline;
-        }
-        a:hover {
-          color: red;
-          background-color: transparent:
-          text-decoration: line-through;
-        }
-        a:active {
-          color: yellow;
-          background-color: transparent;
-          text-decoration: none;
+    <div id="An Intro" class="tabcontent">
 
-        }
+      <h2>A Haiku About Magic</h2>
+        <pre>
+          An eternal choice
+          Grapple with the decision
+          Where do I put cards?
+        </pre>
+
+        <style>
+          a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: overline;
+          }
+          a:visited {
+            color: blue;
+            background-color: transparent;
+            text-decoration: underline;
+          }
+          a:hover {
+            color: red;
+            background-color: transparent:
+            text-decoration: line-through;
+          }
+          a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: none;
+
+          }
+          </style>
+            <a href="https://gatherer.wizards.com/Pages/Default.aspx/" target="_blank">A website to find specific cards - the deckbuilder's dream.</a>
+      <hr>
+
+      <h2>A Real Collector's MTG Card</h2>
+        <style>
+          th, td {
+            padding:15px;
+          }
         </style>
-        <a href="https://gatherer.wizards.com/Pages/Default.aspx/" target="_blank">A website to find specific cards - the deckbuilder's dream.</a>
-    <hr>
+        <table>
+          <tr>
+            <td>The Black Lotus, <q>sold at auction on eBay for $511,100.</q><br><img src="https://static.cardkingdom.com/images/magic-the-gathering/alpha/black-lotus-28010.jpg" alt="Black Lotus"></td>
+            <td>Here's what CBR.com (media commentary website) had to say:<br><blockquote cite="https://www.cbr.com/magic-gathering-mtg-black-lotuses-remaining/"><em>In Magic: The Gathering, there is a set of cards known as the Power Nine. These are considered to be the most powerful from M:TG's original print run, making them incredibly valuable to collectors. However, none of the Power Nine cards are as valuable as the Black Lotus card. In fact, the card's legendary status has lead to it being banned in almost every form of competitive play.</em></blockquote></td>
+          </tr>
+        </table>
+      <hr>
+    </div>
 
-    <h2>A Real Collector's MTG Card</h2>
-      <style>
-        th, td {
-          padding:15px;
-        }
-      </style>
-      <table>
-        <tr>
-          <td>The Black Lotus, <q>sold at auction on eBay for $511,100.</q><br><img src="https://static.cardkingdom.com/images/magic-the-gathering/alpha/black-lotus-28010.jpg" alt="Black Lotus"></td>
-          <td>Here's what CBR.com (media commentary website) had to say:<br><blockquote cite="https://www.cbr.com/magic-gathering-mtg-black-lotuses-remaining/"><em>In Magic: The Gathering, there is a set of cards known as the Power Nine. These are considered to be the most powerful from M:TG's original print run, making them incredibly valuable to collectors. However, none of the Power Nine cards are as valuable as the Black Lotus card. In fact, the card's legendary status has lead to it being banned in almost every form of competitive play.</em></blockquote></td>
-        </tr>
-      </table>
-    <hr>
+    <div id="Getting Started" class tabcontent>
+      <h2>Are You Ready to Play?</h2>
+        <p>Here's some basics...<br><br><strong>What your turn will look like.</strong></p>
+          <dl>
+            <dt>Begin</dt>
+              <dd>Untap lands and creatures so they may become usuable again</dd>
+              <dd>Draw a card (must have 7 cards or less in hand)</dd>
+            <dt>Main Phase</dt>
+              <dd>Play a land (only one per turn)</dd>
+              <dd>Cast creatures and/or sorceries</dd>
+            <dt>Combat</dt>
+              <dd>Declare attackers</dd>
+              <dd>Opponent declares blockers</dd>
+              <dd>Combat damage is dealt</dd>
+            <dt>Second Main Phase</dt>
+              <dd>Play a land (if you haven't already)</dd>
+              <dd>Cast creatures and/or sorceries</dd>
+            <dt>End</dt>
+              <dd>Your creatures heal</dd>
+              <dd>Discard any extra cards in hand</dd>
+              <dd>Pass the turn to your opponent</dd>
+          </dl>
 
-    <h2>Are You Ready to Play?</h2>
-    <p>Here's some basics...<br><br><strong>What your turn will look like.</strong></p>
-      <dl>
-        <dt>Begin</dt>
-          <dd>Untap lands and creatures so they may become usuable again</dd>
-          <dd>Draw a card (must have 7 cards or less in hand)</dd>
-        <dt>Main Phase</dt>
-          <dd>Play a land (only one per turn)</dd>
-          <dd>Cast creatures and/or sorceries</dd>
-        <dt>Combat</dt>
-          <dd>Declare attackers</dd>
-          <dd>Opponent declares blockers</dd>
-          <dd>Combat damage is dealt</dd>
-        <dt>Second Main Phase</dt>
-          <dd>Play a land (if you haven't already)</dd>
-          <dd>Cast creatures and/or sorceries</dd>
-        <dt>End</dt>
-          <dd>Your creatures heal</dd>
-          <dd>Discard any extra cards in hand</dd>
-          <dd>Pass the turn to your opponent</dd>
-      </dl>
-
-      <p><strong>The different styles of decks, ranked as best to worst by ME!</strong></p>
-        <ol>
-          <li>Midrange: a combonation of both aggro and control, midrange decks have cards that continuously generate value throughout the game</li>
-          <li>Combo: these decks rely on synergy between cards, or how well one can activate the other - they usually try to win in a couple turns, focusing on a single type of combo</li>
-          <li>Aggro: lots of low-cost cards that deal damage quickly, before the opponent can react</li>
-          <li>Control: control decks are all about disrupting the opposing attempt to play the game, usually with compounding sorceries and use of "the stack" (the order in which spells resolve)</li>
-        </ol>
+          <p><strong>The different styles of decks, ranked as best to worst by ME!</strong></p>
+            <ol>
+              <li>Midrange: a combonation of both aggro and control, midrange decks have cards that continuously generate value throughout the game</li>
+              <li>Combo: these decks rely on synergy between cards, or how well one can activate the other - they usually try to win in a couple turns, focusing on a single type of combo</li>
+              <li>Aggro: lots of low-cost cards that deal damage quickly, before the opponent can react</li>
+              <li>Control: control decks are all about disrupting the opposing attempt to play the game, usually with compounding sorceries and use of "the stack" (the order in which spells resolve)</li>
+            </ol>
 
 
-      <p><strong>Here's the different types of cards (called "spells")...</strong></p>
-        <ul>
-          <li>Permanents: Lands, creatures, and basically anything that doesn't resolve and go into your graveyard immediately after casting.</li>
-          <li>Instants: You can play these at any time. It's usually useful to have enough mana (untapped lands) left over so they are "quickdrawable."</li>
-          <li>Sorceries: These spells are generally more powerful than instants, and can only be played during your turn.</li>
-        </ul>
+          <p><strong>Here's the different types of cards (called "spells")...</strong></p>
+            <ul>
+              <li>Permanents: Lands, creatures, and basically anything that doesn't resolve and go into your graveyard immediately after casting.</li>
+              <li>Instants: You can play these at any time. It's usually useful to have enough mana (untapped lands) left over so they are "quickdrawable."</li>
+              <li>Sorceries: These spells are generally more powerful than instants, and can only be played during your turn.</li>
+            </ul>
+      </div>
 
   </body>
 </html>
