@@ -8,7 +8,7 @@
     <style>
       .tab {
         overflow: hidden;
-        border: 1px solid;
+        border: 1px solid #ccc;
         background-color: #043D9C;
       }
 
@@ -23,12 +23,37 @@
         font-size: 17px;
       }
 
+      .button span {
+        cursor: crosshair;
+        display: inline-block;
+        position: relative;
+        transition: 0.4s;
+      }
+
+      .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.4s;
+      }
+
       .tab button:hover {
-        background-color: ##32CD32
+        background-color: #32CD32;
+      }
+
+      .button:hover span {
+        padding-right: 25px;
+      }
+
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
       }
 
       .tab button.active {
-        background-color: #ccc
+        background-color: #ccc;
       }
 
       .tabcontent {
@@ -44,9 +69,10 @@
       <p>A collectible card game<br>that is much better<br>than any other you think you've played.</p>
     <hr>
 
+
     <div class="tab">
-      <button class="tablinks" onclick="openPage(event, 'An Intro')">An Intro</button>
-      <button class="tablinks" onclick="openPage(event, 'Getting Started')">Getting Started</button>
+      <button class="button" class="tablinks" onclick="openPage(event, 'An Intro')"><span>An Intro</span></button>
+      <button class="button" class="tablinks" onclick="openPage(event, 'Getting Started')"><span>Getting Started</span></button>
     </div>
 
     <div id="An Intro" class="tabcontent">
@@ -99,7 +125,7 @@
       <hr>
     </div>
 
-    <div id="Getting Started" class tabcontent>
+    <div id="Getting Started" class= "tabcontent">
       <h2>Are You Ready to Play?</h2>
         <p>Here's some basics...<br><br><strong>What your turn will look like.</strong></p>
           <dl>
@@ -139,5 +165,20 @@
             </ul>
       </div>
 
+      <script type="text/javascript">
+        function openPage(event, tabname) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent")
+          for (i = 0; i < tabcontent.length, i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks")
+          for (i = 0; i < tablinks.length, i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "")
+          }
+          document.getElementByID(tabname).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+      </script>
   </body>
 </html>
