@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>Harvey, Jack - MTG Website</title>
-      <link rel="icon" type="image/x-image" href="/favicon.ico">
-
+  <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+  <title>Jack's MTG Site</title>
+    <link rel="icon" type="image/icon" href="/favicon.ico">
     <style>
       .tab {
         overflow: hidden;
@@ -64,19 +63,18 @@
       }
     </style>
   </head>
-  <body >
+
+  <body>
     <h1 style="font-size: 90px; border: 5px #1F5857;">Magic: The Gathering</h1>
       <p>A collectible card game<br>that is much better<br>than any other you think you've played.</p>
     <hr>
 
-
     <div class="tab">
-      <button class="button" class="tablinks" onclick="openPage(event, 'An Intro')"><span>An Intro</span></button>
-      <button class="button" class="tablinks" onclick="openPage(event, 'Getting Started')"><span>Getting Started</span></button>
+      <button class="button" class="tablinks" onclick="openCity(event, 'An Intro')"><span>An Intro</span></button>
+      <button class="button" class="tablinks" onclick="openCity(event, 'Getting Started')"><span>Getting Started</span></button>
     </div>
 
     <div id="An Intro" class="tabcontent">
-
       <h2>A Haiku About Magic</h2>
         <pre>
           An eternal choice
@@ -125,7 +123,7 @@
       <hr>
     </div>
 
-    <div id="Getting Started" class= "tabcontent">
+    <div id="Getting Started" class="tabcontent">
       <h2>Are You Ready to Play?</h2>
         <p>Here's some basics...<br><br><strong>What your turn will look like.</strong></p>
           <dl>
@@ -148,37 +146,39 @@
               <dd>Pass the turn to your opponent</dd>
           </dl>
 
-          <p><strong>The different styles of decks, ranked as best to worst by ME!</strong></p>
-            <ol>
-              <li>Midrange: a combonation of both aggro and control, midrange decks have cards that continuously generate value throughout the game</li>
-              <li>Combo: these decks rely on synergy between cards, or how well one can activate the other - they usually try to win in a couple turns, focusing on a single type of combo</li>
-              <li>Aggro: lots of low-cost cards that deal damage quickly, before the opponent can react</li>
-              <li>Control: control decks are all about disrupting the opposing attempt to play the game, usually with compounding sorceries and use of "the stack" (the order in which spells resolve)</li>
-            </ol>
+        <p><strong>The different styles of decks, ranked as best to worst by ME!</strong></p>
+          <ol>
+            <li>Midrange: a combonation of both aggro and control, midrange decks have cards that continuously generate value throughout the game</li>
+            <li>Combo: these decks rely on synergy between cards, or how well one can activate the other - they usually try to win in a couple turns, focusing on a single type of combo</li>
+            <li>Aggro: lots of low-cost cards that deal damage quickly, before the opponent can react</li>
+            <li>Control: control decks are all about disrupting the opposing attempt to play the game, usually with compounding sorceries and use of "the stack" (the order in which spells resolve)</li>
+          </ol>
 
 
-          <p><strong>Here's the different types of cards (called "spells")...</strong></p>
-            <ul>
-              <li>Permanents: Lands, creatures, and basically anything that doesn't resolve and go into your graveyard immediately after casting.</li>
-              <li>Instants: You can play these at any time. It's usually useful to have enough mana (untapped lands) left over so they are "quickdrawable."</li>
-              <li>Sorceries: These spells are generally more powerful than instants, and can only be played during your turn.</li>
-            </ul>
-      </div>
+        <p><strong>Here's the different types of cards (called "spells")...</strong></p>
+          <ul>
+            <li>Permanents: Lands, creatures, and basically anything that doesn't resolve and go into your graveyard immediately after casting.</li>
+            <li>Instants: You can play these at any time. It's usually useful to have enough mana (untapped lands) left over so they are "quickdrawable."</li>
+            <li>Sorceries: These spells are generally more powerful than instants, and can only be played during your turn.</li>
+          </ul>
+    </div>
 
-      <script type="text/javascript">
-        function openPage(event, tabname) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent")
-          for (i = 0; i < tabcontent.length, i++) {
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks")
-          for (i = 0; i < tablinks.length, i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "")
-          }
-          document.getElementByID(tabname).style.display = "block";
-          evt.currentTarget.className += " active";
+
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
         }
-      </script>
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+
   </body>
 </html>
