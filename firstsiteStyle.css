@@ -1,0 +1,95 @@
+
+/* each tab body section has the same color background */
+div {
+  background-color: gainsboro;
+}
+
+/* images have the same size, unless indicated otherwise by inline styling  */
+img {
+  width: 300px;
+  height: 400px;
+}
+
+/* styling for tab (image/blockquote side-by-side on firstsite.html) */
+th, td {
+  padding:15px;
+}
+
+/* for site tabs - animation, color styling */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #043D9C;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: #ccc;
+  outline: none;
+  cursor: crosshair;
+  padding: 15px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.button span {
+  cursor: crosshair;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+
+.tab button:hover {
+  background-color: #32CD32;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.tab button.active {
+  background-color: #32CD32;
+}
+
+.tabcontent {
+  display: none;
+  padding: 12px 24px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* link styling */
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: overline;
+}
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:hover {
+  color: red;
+  background-color: transparent:
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
+}
